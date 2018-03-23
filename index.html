@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+
+    <div class="wrapper">
+
+      <div class="sidebar setting-bar">
+        <div class="header">
+          <h6> inbox </h6>
+
+          <a href="#"> <i></i> </a>
+        </div>
+
+        <ul class="messages">
+          <li>
+            <a href="#"> All messages   <span> 21 </span> </a>
+          </li>
+          <li>
+            <a href="#" class="active"> Unread   <span> 89 </span> </a>
+          </li>
+          <li>
+            <a href="#"> Important   <span> 6 </span> </a>
+          </li>
+          <li>
+            <a href="#"> Drafts   <span> 27 </span> </a>
+          </li>
+        </ul>
+
+        <hr>
+
+        <ul class="community">
+          <li>
+            <a href="#"> Teams   <span> 4 </span> </a>
+          </li>
+          <li>
+            <a href="#"> Groups   <span> 3 </span> </a>
+          </li>
+          <li>
+            <a href="#"> Channels   <span> 16 </span> </a>
+          </li>
+          <li>
+            <a href="#"> Locations   <span>  </span> </a>
+          </li>
+          <li>
+            <a href="#"> Media   <span> 120 </span> </a>
+          </li>
+        </ul>
+
+        <hr>
+
+        <ul class="controls">
+          <li>
+            <a href="#"> Help   <span>  </span> </a>
+          </li>
+          <li>
+            <a href="#"> Settings   <span>  </span> </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar user-bar" id="app">
+        <div class="search-bar">
+          <input type="text" name="" value="" v-model="search" placeholder="search">
+        </div>
+        <hr>
+
+        <ul class="user-msg">
+          <li v-for="post in filteredList">
+            <a href="#">
+              <div class="forum-card">
+                <div class="online-dot circle"></div>
+                <img :src="post.profile_pic" alt="" class="circle">
+                <div class="forum-cardContent">
+                  <h6> {{ post.name }} </h6>
+                  <p> {{ post.chat }} </p>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="">
+
+      </div>
+
+    </div>
+
+
+    <script>
+      var app=new Vue({
+        el: "#app",
+        data: function(){
+          return {
+          search: '',
+          posts: [
+            { id: '1',
+               name: 'Mark Josef',
+               profile_pic: 'https://avatars1.githubusercontent.com/u/297?v=4',
+               chat: 'Division by Zero, LLC'
+            },
+            { id: '2',
+              name: 'Tony Narlock',
+              profile_pic: 'https://avatars0.githubusercontent.com/u/26336?v=4',
+              chat: '@peergradeio'
+            },
+            { id: '3',
+              name: 'Chris Bailey',
+              profile_pic: 'https://avatars3.githubusercontent.com/u/329?v=4',
+              chat: 'HotelTonight'
+            },
+            { id: '4',
+              name: 'Raphaël Simon',
+              profile_pic: 'https://avatars0.githubusercontent.com/u/36822?v=4',
+              chat: 'RightScale'
+            }
+          ]};
+        },
+        computed:
+        {
+          filteredList:function()
+          {
+             var self=this;
+             return this.posts.filter(function(cust){return cust.name.toLowerCase().indexOf(self.search.toLowerCase())>=0;});
+             //return this.customers;
+          }
+        }
+      });
+    </script>
+
+  </body>
+</html>
