@@ -1,0 +1,262 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+  color: #000;
+}
+.sidebar{
+  list-style-type: none;
+  margin: 0;
+  margin-top: 0;
+  margin-left: 0px;
+  height: 100%;
+  overflow: auto;
+  /* border-right: 1px solid rgba(0, 0, 0, 0.1); */
+  transition: .5s;
+  box-shadow: 0 0 18px rgba(0, 0, 0, .2);
+  /* -webkit-box-shadow: inset -3px 0px 5px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: inset -3px 0px 5px 0px rgba(0,0,0,0.1);
+  box-shadow: inset -3px 0px 5px 0px rgba(0,0,0,0.1); */
+  /* z-index: 2; */
+
+  /* padding: 10px 10px; */
+  position: fixed;
+
+}
+.setting-bar{
+  width: 13%;
+  background: rgba(34, 49, 63, 1);
+  padding: 10px 10px;
+}
+.user-bar{
+  width: 23%;
+  margin-left: 14.5%;
+  background: rgba(34, 49, 63, .98);
+  padding: 10px 10px;
+}
+
+.setting-bar .header{
+  margin-top: -20px;
+}
+.setting-bar .header h6{
+  font-size: 20px;
+  font-weight: 600;
+  font-family: 'Segoe UI';
+  text-transform: capitalize;
+  color: #fff;
+  padding: 0 10px;
+}
+
+
+.user-bar .search-bar{
+  margin: auto auto auto 15px;
+  width: 85%;
+  align-content: center;
+  padding: 15px 0;
+}
+hr{
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.user-bar .search-bar input{
+  background: rgba(255, 255, 255, .1);
+  background-image: url('search.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 88.7%;
+  padding: 10px 10px 10px 40px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Segoe UI';
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  /* background: rgba(44, 62, 80, 1); */
+  color: #fff;
+}
+.user-bar .search-bar input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgba(255, 255, 255, .4);
+}
+.user-bar .search-bar input::-moz-placeholder { /* Firefox 19+ */
+  color: rgba(255, 255, 255, .4);
+}
+.user-bar .search-bar input:-ms-input-placeholder { /* IE 10+ */
+  color: rgba(255, 255, 255, .4);
+}
+.user-bar .search-bar input:-moz-placeholder { /* Firefox 18- */
+  color: rgba(255, 255, 255, .4);
+}
+
+ul.messages{
+  padding: 0px;
+  margin: 0;
+}
+ul.messages li{
+  list-style: none;
+}
+ul.messages li a{
+  display: block;
+  padding: 10px 10px;
+  /* font-family: 'unica one'; */
+  font-family: 'Segoe UI';
+  font-size: .6em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: rgba(255, 255, 255, .6);
+  cursor: pointer;
+}
+ul.messages li a.active{
+  background: rgba(255, 255, 255, .1);
+  border-radius: 3px;
+  color: rgba(255, 255, 255, 1);
+}
+ul.messages li a span{
+  float: right;
+  color: rgba(255, 255, 255, 1);
+}
+
+ul.community{
+  padding: 0px;
+  margin: 0;
+}
+ul.community li{
+  list-style: none;
+}
+ul.community li a{
+  display: block;
+  padding: 10px 10px;
+  /* font-family: 'unica one'; */
+  font-family: 'Segoe UI';
+  font-size: .6em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: rgba(255, 255, 255, .6);
+  cursor: pointer;
+}
+ul.community li a.active{
+  background: rgba(255, 255, 255, .1);
+  border-radius: 3px;
+  color: rgba(255, 255, 255, 1);
+}
+ul.community li a span{
+  float: right;
+  color: rgba(255, 255, 255, 1);
+}
+
+ul.controls{
+  padding: 0px;
+  margin: 0;
+}
+ul.controls li{
+  list-style: none;
+}
+ul.controls li a{
+  display: block;
+  padding: 10px 10px;
+  /* font-family: 'unica one'; */
+  font-family: 'Segoe UI';
+  font-size: .6em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: rgba(255, 255, 255, .6);
+  cursor: pointer;
+}
+ul.controls li a.active{
+  background: rgba(255, 255, 255, .1);
+  border-radius: 3px;
+  color: rgba(255, 255, 255, 1);
+}
+ul.controls li a span{
+  float: right;
+  color: rgba(255, 255, 255, 1);
+}
+
+ul.user-msg{
+  padding: 0px;
+  margin: 0;
+}
+ul.user-msg li{
+  list-style: none;
+}
+ul.user-msg li a {
+  display: block;
+  padding: 0 10px;
+  font-family: 'Segoe UI';
+  color: #222;
+  font-size: .7em;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+ul.user-msg::-webkit-scrollbar{
+  width: 10px;
+}
+ul.user-msg::-webkit-scrollbar-track {
+  background: transparent;
+  margin-right: 10px;
+  /* change me to blue to match the background */
+}
+ul.user-msg::-webkit-scrollbar-thumb{
+  border-radius: 50px;
+  background: #BDC3C7;
+  border: 3px #fafafa solid;
+}
+ul.user-msg::-webkit-scrollbar-thumb:hover{
+  background: #95A5A6;
+}
+.forum-card{
+  padding: 0px 0px;
+}
+.forum-card .online-dot{
+  width: 2px;
+  height: 2px;
+  background: #00B16A;
+  position: absolute;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  margin-top: 16px;
+}
+.forum-card > img{
+  height: 40px;
+  /* border: 2px solid #ff9966; */
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 50%;
+  margin-left: 5px;
+  margin-top: -13px;
+}
+.forum-cardContent{
+  width: 75%;
+  height: auto;
+  padding: 10px 10px;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: sub;
+}
+.forum-cardContent h6{
+  font-size: 1em;
+  font-family: 'Segoe UI';
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-bottom: -10px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  color: #fff;
+}
+.forum-cardContent p{
+  font-size: .9em;
+  font-family: 'Segoe UI';
+  text-transform: lowercase;
+  color: rgba(255, 255, 255, .6);
+}
